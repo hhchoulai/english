@@ -1,0 +1,24 @@
+a {
+    color: black;
+}
+
+.fenye {
+    margin-top: 50px;
+    padding: 0 480px;
+}
+
+.serach-content {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.serach-content .mb-3, .my-3 {
+    width: 350px;
+    margin-bottom: 1.5rem!important;
+}
+
+.serach-content .title {
+    padding: 0 50px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}

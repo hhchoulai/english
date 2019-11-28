@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息查询</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/stu-search.css">
+</head>
+<body>
+<header>
+    <div class="mes">
+        <span>向阳中学</span>&nbsp;&nbsp;&nbsp;<span>欢迎admin登陆</span>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            学生管理
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="student-search.html">查询学生</a>
+            <a class="dropdown-item" href="student-add.html">增加学生</a>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            教师管理
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">增加教师</a>
+            <!--<a class="dropdown-item" href="#">修改教师</a>-->
+            <!--<a class="dropdown-item" href="#">删除教师</a>-->
+            <a class="dropdown-item" href="teacher-search.html">查看教师</a>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            课程管理
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="course-add.html">添加课程</a>
+            <a class="dropdown-item" href="course-delete.html">删除课程</a>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            班级管理
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">添加班级</a>
+            <a class="dropdown-item" href="#">删除班级</a>
+            <!--<a class="dropdown-item" href="#">安排老师</a>-->
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            成绩管理
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">录入考试成绩</a>
+            <a class="dropdown-item" href="#">查看学生成绩</a>
+            <a class="dropdown-item" href="#">修改学生成绩</a>
+            <a class="dropdown-item" href="#">打印学生成绩</a>
+        </div>
+    </div>
+</header>
+<div class="serach-content">
+    <div class="title">
+        <div><h4>学生列表</h4></div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="请输入关键字" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">搜索</button>
+            </div>
+        </div>
+    </div>
+    <div class="student-list">
+        <table class="table">
+            <thead>
+            <tr style="font-weight: bold">
+                <th scope="col">#</th>
+                <th scope="col">姓名</th>
+                <th scope="col">学号</th>
+                <th scope="col">性别</th>
+                <th scope="col">身份证号</th>
+                <th scope="col">籍贯</th>
+                <th scope="col">班级</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><a href="student-detail.html">1</a></th>
+                    <td><a href="student-detail.html">闫东凯</a></td>
+                    <td><a href="student-detail.html">1001601</a></td>
+                    <td><a href="student-detail.html">男</a></td>
+                    <td><a href="student-detail.html">130524199903234451</a></td>
+                    <td><a href="student-detail.html">河北</a></td>
+                    <td><a href="student-detail.html">2016届(1)班</a></td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="student-detail.html">1</a></th>
+                    <td><a href="student-detail.html">闫东凯</a></td>
+                    <td><a href="student-detail.html">1001601</a></td>
+                    <td><a href="student-detail.html">男</a></td>
+                    <td><a href="student-detail.html">130524199903234451</a></td>
+                    <td><a href="student-detail.html">河北</a></td>
+                    <td><a href="student-detail.html">2016届(1)班</a></td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="student-detail.html">1</a></th>
+                    <td><a href="student-detail.html">闫东凯</a></td>
+                    <td><a href="student-detail.html">1001601</a></td>
+                    <td><a href="student-detail.html">男</a></td>
+                    <td><a href="student-detail.html">130524199903234451</a></td>
+                    <td><a href="student-detail.html">河北</a></td>
+                    <td><a href="student-detail.html">2016届(1)班</a></td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="student-detail.html">1</a></th>
+                    <td><a href="student-detail.html">闫东凯</a></td>
+                    <td><a href="student-detail.html">1001601</a></td>
+                    <td><a href="student-detail.html">男</a></td>
+                    <td><a href="student-detail.html">130524199903234451</a></td>
+                    <td><a href="student-detail.html">河北</a></td>
+                    <td><a href="student-detail.html">2016届(1)班</a></td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="student-detail.html">1</a></th>
+                    <td><a href="student-detail.html">闫东凯</a></td>
+                    <td><a href="student-detail.html">1001601</a></td>
+                    <td><a href="student-detail.html">男</a></td>
+                    <td><a href="student-detail.html">130524199903234451</a></td>
+                    <td><a href="student-detail.html">河北</a></td>
+                    <td><a href="student-detail.html">2016届(1)班</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="fenye">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+</html>
