@@ -1,0 +1,32 @@
+body{
+    width: 1170px;
+    margin: 0 auto;
+}
+header{
+    margin-top:15px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+header .mes{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: dimgray;
+    font-family: cursive;
+}
+main .banner{
+    height: 500px;
+    width: 80%;
+    /*border: black 1px solid;*/
+    margin: 10px auto;
+}
+main .banner .carousel-item{
+    height: 500px;
+    width:100%;
+}
+main .banner .carousel-item img{
+    height: inherit;
+    width: inherit;
+}

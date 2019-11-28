@@ -1,0 +1,48 @@
+body{
+    width: 1170px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    margin: 50px 0 0 0;
+}
+header .content {
+    margin: 0 auto;
+    display: flex;
+}
+header .logo{
+    width: 250px;
+}
+header .title{
+    margin-top: 58px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    margin-right: 160px;
+}
+main .login .btn {
+    width: 530px;
+}
+#valimg{
+    width: 86px;
+    height: 38px;
+}
+main .rolecontent{
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1.5rem!important;
+}
+main .rolecontent input{
+    margin-left: 10px;
+    cursor: pointer;
+}
+main .login{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,42 @@
+body{
+    width: 1170px;
+    margin: 0 auto;
+}
+header{
+    margin-top:15px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    /*border-bottom: 2px solid red;*/
+}
+header .mes{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: dimgray;
+    font-family: cursive;
+}
+main .search{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .search input{
+    margin: 0 10px;
+}
+main .search span{
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: cursive;
+}
+main .operate{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .operate button:last-child{
+    margin-left: 10px;
+}

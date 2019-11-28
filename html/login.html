@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <div class="logo">
+            <img src="http://www.uugai.com/img/img100/rw-4-45.png" alt="">
+        </div>
+        <div class="title">
+            <h1>中学英语教学辅助管理系统</h1>
+        </div>
+    </div>
+</header>
+
+<main style="margin: 0 350px">
+    <!--输入框  开始-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="username">用户名</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="username">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="password">密码</span>
+        </div>
+        <input type="password" class="form-control" aria-label="Default" aria-describedby="password">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="validate">验证码</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="validate">
+        <img src="../img/validate.png" id="valimg">
+    </div>
+    <!--输入框  结束-->
+
+    <!--角色  开始-->
+    <div class="rolecontent">
+        <span>角色：</span>
+        <input type="radio" name="role" class="roles" value="stu" id="stu" onclick="a()">学生（家长）</input>
+        <input type="radio" name="role" class="roles" value="tea" id="tea" onclick="b()">教师</input>
+        <input type="radio" name="role" class="roles"  value="admin" id="admin" onclick="c()">校长</input>
+    </div>
+    <!--角色  结束-->
+
+    <!--登陆按钮-->
+    <div class="login">
+        <button type="button" class="btn btn-info" onclick="login()">登陆</button>
+    </div>
+</main>
+<script>
+   /*let roles=document.getElementsByClassName("roles");
+   for (let i=0;i<roles.length;i++){
+       if (roles[i].value==="stu") {
+           $("#stu").prop("checked",true);
+       }
+       else if (roles[i].value==="tea") {
+           $("#tea").prop("checked",true);
+       }
+       else if (roles[i].value==="admin") {
+           $("#admin").prop("checked",true);
+       }
+   }*/
+   function a() {
+       $("#stu").attr("checked",true);
+       $("#tea").removeAttr("checked");
+       $("#admin").removeAttr("checked")
+   }
+   function b() {
+       $("#tea").attr("checked",true);
+       $("#stu").removeAttr("checked")
+       $("#admin").removeAttr("checked")
+   }
+   function c() {
+       $("#admin").attr("checked",true);
+       $("#stu").removeAttr("checked")
+       $("#tea").removeAttr("checked")
+   }
+
+   // $("#stu").checked==false;
+   // console.log($("#stu")[0].checked);
+
+  function login() {
+      if ($("#stu")[0].checked===true){
+          console.log(1);
+          location.href="student.html";
+      } else if ( $("#tea")[0].checked===true) {
+          location.href="teacher.html";
+      }else if ( $("#admin")[0].checked===true) {
+          location.href="admin.html";
+      }
+  }
+</script>
+</body>
+</html>
