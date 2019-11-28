@@ -4,7 +4,19 @@
     margin-left: 40px;
 }
 
+.course-list .mb-3, .my-3 {
+    width: 350px;
+    margin-bottom: 1.5rem!important;
+}
+
+.course-list .title {
+    padding: 0 50px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .fenye {
     margin-top: 50px;
     padding: 0 480px;
 }
+

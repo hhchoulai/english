@@ -22,10 +22,8 @@
             学生管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">查询学生信息</a>
-            <a class="dropdown-item" href="#">修改学生信息</a>
-            <a class="dropdown-item" href="#">删除学生信息</a>
-            <a class="dropdown-item" href="#">查看学生信息</a>
+            <a class="dropdown-item" href="student-search.html">查询学生</a>
+            <a class="dropdown-item" href="student-add.html">增加学生</a>
         </div>
     </div>
     <div class="btn-group">
@@ -34,9 +32,9 @@
         </button>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="#">增加教师</a>
-            <a class="dropdown-item" href="#">修改教师</a>
-            <a class="dropdown-item" href="#">删除教师</a>
-            <a class="dropdown-item" href="#">查看教师</a>
+            <!--<a class="dropdown-item" href="#">修改教师</a>-->
+            <!--<a class="dropdown-item" href="#">删除教师</a>-->
+            <a class="dropdown-item" href="teacher-search.html">查看教师</a>
         </div>
     </div>
     <div class="btn-group">
@@ -44,8 +42,8 @@
             课程管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">添加课程</a>
-            <a class="dropdown-item" href="#">删除课程</a>
+            <a class="dropdown-item" href="course-add.html">添加课程</a>
+            <a class="dropdown-item" href="course-delete.html">删除课程</a>
         </div>
     </div>
     <div class="btn-group">
@@ -55,7 +53,7 @@
         <div class="dropdown-menu">
             <a class="dropdown-item" href="#">添加班级</a>
             <a class="dropdown-item" href="#">删除班级</a>
-            <a class="dropdown-item" href="#">安排老师</a>
+            <!--<a class="dropdown-item" href="#">安排老师</a>-->
         </div>
     </div>
     <div class="btn-group">
@@ -72,8 +70,14 @@
 </header>
 
 <div class="course-list">
-    <div style="padding: 0 480px">
-        <h4>课程删除操作</h4>
+    <div class="title">
+        <div><h4>课程删除操作</h4></div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="请输入关键字" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">搜索</button>
+            </div>
+        </div>
     </div>
     <table class="table">
         <thead>
