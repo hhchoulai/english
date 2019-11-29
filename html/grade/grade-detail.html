@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>查询老师</title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/tea-search.css">
+    <title>学生成绩详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/tea-search.css">
 </head>
 <body>
 <header>
@@ -21,8 +22,8 @@
             学生管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="student-search.html">查询学生</a>
-            <a class="dropdown-item" href="student-add.html">增加学生</a>
+            <a class="dropdown-item" href="../student/student-search.html">查询学生</a>
+            <a class="dropdown-item" href="../student/student-add.html">增加学生</a>
         </div>
     </div>
     <div class="btn-group">
@@ -30,8 +31,8 @@
             教师管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="teacher-add.html">增加教师</a>
-            <a class="dropdown-item" href="teacher-search.html">查看教师</a>
+            <a class="dropdown-item" href="../teacher/teacher-add.html">增加教师</a>
+            <a class="dropdown-item" href="../teacher/teacher-search.html">查看教师</a>
         </div>
     </div>
     <div class="btn-group">
@@ -39,8 +40,8 @@
             课程管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="course-add.html">添加课程</a>
-            <a class="dropdown-item" href="course-delete.html">删除课程</a>
+            <a class="dropdown-item" href="../course/course-add.html">添加课程</a>
+            <a class="dropdown-item" href="../course/course-delete.html">删除课程</a>
         </div>
     </div>
     <div class="btn-group">
@@ -48,8 +49,8 @@
             班级管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="class-add.html">添加班级</a>
-            <a class="dropdown-item" href="class-delete.html">删除班级</a>
+            <a class="dropdown-item" href="../class/class-add.html">添加班级</a>
+            <a class="dropdown-item" href="../class/class-delete.html">删除班级</a>
             <!--<a class="dropdown-item" href="#">安排老师</a>-->
         </div>
     </div>
@@ -64,49 +65,64 @@
     </div>
 </header>
 <main>
-   <div class="search">
-       <span>按教师编号查询：</span>
-       <input type="text" placeholder="请输入编号">
-       <button type="button"  class="btn btn-outline-info">查询</button>
-   </div>
-    <div class="info">
+    <div class="info" style="margin-top: 60px">
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th scope="col" colspan="2">详细信息</th>
+                <th scope="col" colspan="2" style="font-weight: bold">成绩详情</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th scope="row">编号</th>
-                <td>10001</td>
+                <th scope="row">学号</th>
+                <td>1001601</td>
             </tr>
             <tr>
                 <th scope="row">姓名</th>
-                <td>Mark</td>
+                <td>闫东凯</td>
             </tr>
             <tr>
-                <th scope="row">年龄</th>
-                <td>38</td>
+                <th scope="row">语文</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">性别</th>
-                <td>男</td>
+                <th scope="row">数学</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">职称</th>
-                <td>英语老师</td>
+                <th scope="row">英语</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">所带班级</th>
-                <td>高一（1）班</td>
+                <th scope="row">物理</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">化学</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">生物</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">地理</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">历史</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">总分</th>
+                <td>480</td>
             </tr>
             </tbody>
         </table>
     </div>
     <div class="operate">
-        <button type="button" class="btn btn-outline-info" id="btn-delete">删除</button>
-        <button type="button" class="btn btn-outline-info">修改</button>
+        <button id="btn-delete" type="button" class="btn btn-outline-info">修改</button>
+        <button type="button" class="btn btn-outline-info">打印</button>
     </div>
     <div class="msg" style="margin: auto 0">
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -122,20 +138,12 @@
                         删除成功
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button id="modal-btn" type="button" class="btn btn-primary">确定</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-<script>
-
-        $('#btn-delete').click(function () {
-            $('.modal').modal('show');
-            $('.info').attr('style','opacity: 0;')
-        });
-
-</script>
 </body>
 </html>

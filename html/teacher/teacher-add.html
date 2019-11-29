@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>添加学生</title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/course-add.css">
+    <title>增加老师</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/course-add.css">
 </head>
 <body>
 <header>
@@ -22,8 +22,8 @@
             学生管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="student-search.html">查询学生</a>
-            <a class="dropdown-item" href="student-add.html">增加学生</a>
+            <a class="dropdown-item" href="../student/student-search.html">查询学生</a>
+            <a class="dropdown-item" href="../student/student-add.html">增加学生</a>
         </div>
     </div>
     <div class="btn-group">
@@ -40,8 +40,8 @@
             课程管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="course-add.html">添加课程</a>
-            <a class="dropdown-item" href="course-delete.html">删除课程</a>
+            <a class="dropdown-item" href="../course/course-add.html">添加课程</a>
+            <a class="dropdown-item" href="../course/course-delete.html">删除课程</a>
         </div>
     </div>
     <div class="btn-group">
@@ -49,8 +49,8 @@
             班级管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="class-add.html">添加班级</a>
-            <a class="dropdown-item" href="class-delete.html">删除班级</a>
+            <a class="dropdown-item" href="../class/class-add.html">添加班级</a>
+            <a class="dropdown-item" href="../class/class-delete.html">删除班级</a>
             <!--<a class="dropdown-item" href="#">安排老师</a>-->
         </div>
     </div>
@@ -59,37 +59,35 @@
             成绩管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="grade-add.html">录入考试成绩</a>
-            <a class="dropdown-item" href="grade-search.html">查看学生成绩</a>
+            <a class="dropdown-item" href="../grade/grade-add.html">录入考试成绩</a>
+            <a class="dropdown-item" href="../grade/grade-search.html">查看学生成绩</a>
         </div>
     </div>
 </header>
-<div>
-    <h3 style="text-align: center;margin-top: 40px;margin-bottom: -30px;">添加学生</h3>
-</div>
+<h3>老师添加</h3>
 <div class="add-form">
     <form>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="姓名">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="教师编号">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="学号">
+            <input type="text" class="form-control"  placeholder="教师姓名">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="性别">
+            <input type="text" class="form-control"  placeholder="性别">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="身份证号">
-        </div> <div class="form-group">
-            <input type="text" class="form-control" placeholder="家庭住址">
+            <input type="text" class="form-control"  placeholder="电话">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="籍贯">
+            <input type="text" class="form-control"placeholder="地址">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="班级">
+            <input type="text" class="form-control"  placeholder="入职时间">
         </div>
-
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="教育背景">
+        </div>
         <div style="text-align: right; margin-right: 25px"><button type="submit" class="btn btn-primary">添加</button></div>
     </form>
 </div>
