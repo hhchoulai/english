@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/course-add.css">
 </head>
 <body>
 <header>
@@ -30,9 +31,7 @@
             教师管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">增加教师</a>
-            <!--<a class="dropdown-item" href="#">修改教师</a>-->
-            <!--<a class="dropdown-item" href="#">删除教师</a>-->
+            <a class="dropdown-item" href="teacher-add.html">增加教师</a>
             <a class="dropdown-item" href="teacher-search.html">查看教师</a>
         </div>
     </div>
@@ -50,8 +49,8 @@
             班级管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">添加班级</a>
-            <a class="dropdown-item" href="#">删除班级</a>
+            <a class="dropdown-item" href="class-add.html">添加班级</a>
+            <a class="dropdown-item" href="class-delete.html">删除班级</a>
             <!--<a class="dropdown-item" href="#">安排老师</a>-->
         </div>
     </div>
@@ -60,12 +59,39 @@
             成绩管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">录入考试成绩</a>
-            <a class="dropdown-item" href="#">查看学生成绩</a>
-            <a class="dropdown-item" href="#">修改学生成绩</a>
-            <a class="dropdown-item" href="#">打印学生成绩</a>
+            <a class="dropdown-item" href="grade-add">录入考试成绩</a>
+            <a class="dropdown-item" href="grade-search">查看学生成绩</a>
         </div>
     </div>
 </header>
+<div>
+    <h3 style="text-align: center;margin-top: 40px;margin-bottom: -30px;">添加学生</h3>
+</div>
+<div class="add-form">
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="姓名">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="学号">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="性别">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="身份证号">
+        </div> <div class="form-group">
+            <input type="text" class="form-control" placeholder="家庭住址">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="籍贯">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="班级">
+        </div>
+
+        <div style="text-align: right; margin-right: 25px"><button type="submit" class="btn btn-primary">添加</button></div>
+    </form>
+</div>
 </body>
 </html>

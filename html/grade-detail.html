@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>查询老师</title>
+    <title>学生成绩详情</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/tea-search.css">
 </head>
 <body>
@@ -64,49 +65,84 @@
     </div>
 </header>
 <main>
-   <div class="search">
-       <span>按教师编号查询：</span>
-       <input type="text" placeholder="请输入编号">
-       <button type="button"  class="btn btn-outline-info">查询</button>
-   </div>
-    <div class="info">
+    <div class="info" style="margin-top: 60px">
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th scope="col" colspan="2">详细信息</th>
+                <th scope="col" colspan="2" style="font-weight: bold">成绩详情</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th scope="row">编号</th>
-                <td>10001</td>
+                <th scope="row">学号</th>
+                <td>1001601</td>
             </tr>
             <tr>
                 <th scope="row">姓名</th>
-                <td>Mark</td>
+                <td>闫东凯</td>
             </tr>
             <tr>
-                <th scope="row">年龄</th>
-                <td>38</td>
+                <th scope="row">语文</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">性别</th>
-                <td>男</td>
+                <th scope="row">数学</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">职称</th>
-                <td>英语老师</td>
+                <th scope="row">英语</th>
+                <td>60</td>
             </tr>
             <tr>
-                <th scope="row">所带班级</th>
-                <td>高一（1）班</td>
+                <th scope="row">物理</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">化学</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">生物</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">地理</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">历史</th>
+                <td>60</td>
+            </tr>
+            <tr>
+                <th scope="row">总分</th>
+                <td>480</td>
             </tr>
             </tbody>
         </table>
     </div>
     <div class="operate">
-        <button type="button" class="btn btn-outline-info">删除</button>
-        <button type="button" class="btn btn-outline-info">修改</button>
+        <button id="btn-delete" type="button" class="btn btn-outline-info">修改</button>
+        <button type="button" class="btn btn-outline-info">打印</button>
+    </div>
+    <div class="msg" style="margin: auto 0">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">温馨提示</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        删除成功
+                    </div>
+                    <div class="modal-footer">
+                        <button id="modal-btn" type="button" class="btn btn-primary">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 </body>
