@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>查询老师</title>
+    <title>课程老师</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/tea-search.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/course-add.css">
 </head>
 <body>
 <header>
@@ -30,7 +31,9 @@
             教师管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="teacher-add.html">增加教师</a>
+            <a class="dropdown-item" href="#">增加教师</a>
+            <!--<a class="dropdown-item" href="#">修改教师</a>-->
+            <!--<a class="dropdown-item" href="#">删除教师</a>-->
             <a class="dropdown-item" href="teacher-search.html">查看教师</a>
         </div>
     </div>
@@ -48,8 +51,8 @@
             班级管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="class-add.html">添加班级</a>
-            <a class="dropdown-item" href="class-delete.html">删除班级</a>
+            <a class="dropdown-item" href="#">添加班级</a>
+            <a class="dropdown-item" href="#">删除班级</a>
             <!--<a class="dropdown-item" href="#">安排老师</a>-->
         </div>
     </div>
@@ -58,61 +61,30 @@
             成绩管理
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="grade-add">录入考试成绩</a>
-            <a class="dropdown-item" href="grade-search">查看学生成绩</a>
+            <a class="dropdown-item" href="#">录入考试成绩</a>
+            <a class="dropdown-item" href="#">查看学生成绩</a>
+            <a class="dropdown-item" href="#">修改学生成绩</a>
+            <a class="dropdown-item" href="#">打印学生成绩</a>
         </div>
     </div>
 </header>
-<main>
-   <div class="search">
-       <span>按教师编号查询：</span>
-       <input type="text" placeholder="请输入编号">
-       <button type="button"  class="btn btn-outline-info">查询</button>
-   </div>
-    <div class="info">
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th scope="col" colspan="2">详细信息</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">编号</th>
-                <td>10001</td>
-            </tr>
-            <tr>
-                <th scope="row">姓名</th>
-                <td>Mark</td>
-            </tr>
-            <tr>
-                <th scope="row">年龄</th>
-                <td>38</td>
-            </tr>
-            <tr>
-                <th scope="row">性别</th>
-                <td>男</td>
-            </tr>
-            <tr>
-                <th scope="row">职称</th>
-                <td>英语老师</td>
-            </tr>
-            <tr>
-                <th scope="row">所带班级</th>
-                <td>高一（1）班</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="operate">
-        <button type="button" class="btn btn-outline-info" onclick="clearAll()">删除</button>
-        <button type="button" class="btn btn-outline-info">修改</button>
-    </div>
-</main>
-<script>
-    function clearAll() {
-        alert("删除成功")
-    }
-</script>
+<h3>班级添加</h3>
+<div class="add-form">
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="班级编号">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="开班时间">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="班主任">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="班级人数">
+        </div>
+        <div style="text-align: right; margin-right: 25px"><button type="submit" class="btn btn-primary">添加</button></div>
+    </form>
+</div>
 </body>
 </html>
